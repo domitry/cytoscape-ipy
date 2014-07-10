@@ -8,7 +8,7 @@ body {
   font: 14px helvetica neue, helvetica, arial, sans-serif;
 }
 
-#cy {
+#{{uuid}} {
   height: 500px;
   width: 500px;
   position: absolute;
@@ -21,7 +21,7 @@ body {
 (function(){
 
 function render(){
-$('#cy').cytoscape({
+$('#{{uuid}}').cytoscape({
   style: cytoscape.stylesheet()
     .selector('node')
       .css({
@@ -93,8 +93,8 @@ before_render();
 </script>
 </head>
 <body>
-  <div id="cy"></div>
-  <!-- When only #cy div is placed on this page, the height of output-box on ipynb will be 0px. One line below will prevent that. -->
+  <div id="{{uuid}}"></div>
+  <!-- When only #uuid div is placed on this page, the height of output-box on ipynb will be 0px. One line below will prevent that. -->
   <div id="dammy" style="width:700px;height:500px">
 </body>
 </html>

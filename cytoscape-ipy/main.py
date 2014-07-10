@@ -35,6 +35,7 @@ def plot(nodes=None, edges=None):
 
     path = os.path.abspath(os.path.dirname(__file__)) + '/template.html'
     template = Template(open(path).read())
-    html = template.render(nodes=json.dumps(nodes), edges = json.dumps(edges))
+    html = template.render(nodes=json.dumps(nodes), edges = json.dumps(edges), uuid="cy" + str(uuid.uuid4()))
     return display(HTML(html))
+
 
